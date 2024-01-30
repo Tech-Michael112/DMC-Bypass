@@ -1,4 +1,4 @@
-import os, sys,time
+import os, sys,time,platform
 print("""
 
 ██████  ██    ██ ██████   █████  ███████ ███████ ███████ ██████      
@@ -11,8 +11,13 @@ print("""
 [~] Wait for Chigozie Bypass 
 """)                                                                  
 
-#os.system('xdg-open https://chat.whatsapp.com/GO3uvcJyyDpCQFHL48vlF3')
-try:
-    __import__("HAX").menu()
-except Exception as e:
-    exit(str(e))
+#os.system('xdg-open https://chat.whatsapp.com/GO3uvcJyyDpCQFHL48vlF3') pull')
+ 
+import requests
+bit = platform.architecture()[0]
+if bit == '64bit':
+    from HOT import dmc_apv
+    dmc_apv()
+elif bit == '32bit':
+    from HOT import dmc_apv
+    dmc_apv()
